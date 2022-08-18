@@ -84,7 +84,7 @@ const Calculator = () => {
       {result && result.nauticalMiles > 0 && from.shortCode && to.shortCode && (
         <Grid item xs={12} className=" distance-selector ">
           <Grid container justifyContent={"center"} className="distance-wrapper">
-            <div className="distance-selector-inner">
+            <Grid item xs={12} className="distance-selector-inner">
               <div className="distance-selector-box">
                 <span className="distance-points">From</span>
                 <span className="cities">{from.shortCode}</span>
@@ -95,15 +95,15 @@ const Calculator = () => {
                 <span className="distance-points">To</span>
                 <span className="cities">{to.shortCode}</span>
               </div>
-            </div>
+            </Grid>
 
-            <div className="distance">
+            <Grid item xs={12} className="distance">
               <Box>
                 {`${result.nauticalMiles.toFixed(2)} nautical miles / ${result.kilometers.toFixed(2)} km is the distance From ${from.label} To ${
                   to.label
                 }`}
               </Box>
-            </div>
+            </Grid>
           </Grid>
         </Grid>
       )}
